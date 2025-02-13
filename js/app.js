@@ -30,11 +30,13 @@
         <li>\
         <div class='question-wrapper'>\
         <h4 id='question-{{id}}'>{{question}}</h4>\
-        <a class='control-indicator collapsed' data-toggle='collapse' aria-expanded='false' aria-controls='#explanation-{{id}}' href='#explanation-{{id}}''>\
+        <a class='control-indicator' data-bs-toggle='collapse' href='#explanation-{{id}}' role='button' aria-expanded='false' aria-controls='explanation-{{id}}'>\
             <span class='sr-only'>Expand {{question}}</span>\
         </a>\
         </div>\
-        <div class='explanation collapse' id='explanation-{{id}}'>{{{description}}}</div>\
+        <div class='collapse' id='explanation-{{id}}'>\
+            <div class='explanation'>{{{description}}}</div>\
+        </div>\
         <fieldset aria-labelledby='question-{{id}}'>\
         {{#choices}}\
             <div class='checkbox' facetid='{{id}}'>\
