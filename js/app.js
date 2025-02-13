@@ -110,6 +110,7 @@
         $('#pagechartheader').html(response.chart_header.replace(/(?:\r\n|\r|\n)/g, '<br />'));
         $('#pageemailformheader').html(response.email_form_header.replace(/(?:\r\n|\r|\n)/g, '<br />'));
         //$('#pageemailaddress').html(response.data.email_address);
+        contact_email = response.email_address;
         //$('#pageemailname').html(response.data.email_name);
         //$('#pageemailbody').html(response.email_body.replace(/(?:\r\n|\r|\n)/g, '<br />'));
         $('#pagemainheader').html(response.main_header.replace(/(?:\r\n|\r|\n)/g, '<br />'));
@@ -570,7 +571,7 @@ function validateEmail(Email) {
             emailaddresses.push(email);
         }
         if ($("#emailtordmsg").prop("checked")) {
-            emailaddresses.push("rich.marisa@gmail.com"); // rdmsg-services@cornell.edu
+            emailaddresses.push(contact_email);
         }
         if (emailaddresses.length > 0) {
             var csrf_token;
